@@ -50,10 +50,6 @@
                 <input type="radio" name="radio-btn" id="radio4">
 
                 <div class="slide first">
-                    <img src="bg.png" alt="">
-                </div>
-
-                <div class="slide">
                     <img src="bg1.png" alt="">
                 </div>
 
@@ -64,12 +60,25 @@
                 <div class="slide">
                     <img src="bg2.png" alt="">
                 </div>
+
+                <div class="slide">
+                    <img src="bg.png" alt="">
+                </div>
+
+                <div class="navigation-auto">
+                    <div class="auto-btn1"></div>
+                    <div class="auto-btn2"></div>
+                    <div class="auto-btn3"></div>
+                    <div class="auto-btn4"></div>
+                </div>
+
+            </div>
             
               <div class="navigation-bar">
-                <label for="radio1">Botão 1</label>
-                <label for="radio2">Botão 2</label>
-                <label for="radio3">Botão 3</label>
-                <label for="radio4">Botão 4</label>
+                <label class="manual-btn" for="radio1"></label>
+                <label class="manual-btn" for="radio2"></label>
+                <label class="manual-btn" for="radio3"></label>
+                <label class="manual-btn" for="radio4"></label>
               </div>
 
             </div>
