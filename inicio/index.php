@@ -50,19 +50,19 @@
                 <input type="radio" name="radio-btn" id="radio4">
 
                 <div class="slide first">
-                    <img src="bg1.png" alt="">
+                    <img src="bgn1.png" alt="">
                 </div>
 
                 <div class="slide">
-                    <img src="bg3.png" alt="">
+                    <img src="bgn3.png" alt="">
                 </div>
 
                 <div class="slide">
-                    <img src="bg2.png" alt="">
+                    <img src="bgn2.png" alt="">
                 </div>
 
                 <div class="slide">
-                    <img src="bg.png" alt="">
+                    <img src="bgn.png" alt="">
                 </div>
 
                 <div class="navigation-auto">
