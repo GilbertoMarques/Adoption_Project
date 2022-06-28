@@ -28,14 +28,20 @@ body , html {
 
 /* Navbar */
 .navbar {
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     display: flex;
     width: 100%;
+    height: 80px;
     justify-content: space-between;
     padding: 20px;
     color: #ffffff;
+    background-color: #ffffff;
+    -webkit-box-shadow: 0px 5px 7px 0px #32323299;
+    -moz-box-shadow: 0px 5px 7px 0px #32323299;
+    box-shadow: 0px 5px 7px 0px #32323299;
+    
 }
 .nav-links {
     display: flex;
@@ -78,9 +84,9 @@ header {
     color: #ffffff;
 }
 .btn {
-    padding: 8px 15px;
-    background: #0e748d5d;
-    border-radius: 30px;
+    padding: 4px 12px;
+    background: #0e748dfb;
+    border-radius: 25px;
     color: #0daed6;
 }
 .menu-btn {
@@ -282,7 +288,7 @@ img:hover {
 .btn:hover {
     background: #0daed6;
     color: #ffffff;
-    box-shadow: 2px 2px 5px #00000056;
+    box-shadow: 2px 2px 5px #000000c4;
 }
 line:hover {
     color: #0e748d;

@@ -1,13 +1,13 @@
 <?php 
 
-include 'conexao.php';
+include_once 'conexao.php';
 
 session_start();
 
 error_reporting(0);
 
 if (isset($_SESSION['nomeusuario'])) {
-    header("Location: ../inicio/index.php");
+    header("Location: ../formulario/index.html");
 }
 
 if (isset($_POST['submit'])) {
@@ -19,7 +19,7 @@ if (isset($_POST['submit'])) {
 	if ($result->num_rows > 0) {
 		$row = mysqli_fetch_assoc($result);
 		$_SESSION['nomeusuario'] = $row['nomeusuario'];
-		header("Location: ../inicio/index.php");
+		header("Location: ../formulario/index.html");
 	} else {
 		echo "<script>alert('E-mail ou senha está errado.')</script>";
 	}
@@ -52,6 +52,9 @@ if (isset($_POST['submit'])) {
 			</div>
 			<p class="login-register-text">Não tem conta? <a href="cadastro.php">Cadastre-se</a></p>
 		</form>
+		<br>
+		<p class="login-register-text">Esqueceu a senha? <a href="recuperarsenha.php">Clique aqui</a></p>
+
 	</div>
 </body>
 </html>

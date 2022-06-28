@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="imagem/png" href="../inicio/logo.png"/>
+    <link rel="stylesheet" href="style.css" />
+
+    <title>Formulário | Focinho Feliz</title>
+</head>
+<body>
+            <!-- NavBar -->
+            <nav class="navbar">
+                <img src="logo1.png" alt="logo1.png" style="width:120px;height:40px;object-fit:cover;object-position:50% 50%">
+                    <ul class="nav-links">
+                        <li class="btn"><a href="../inicio/index.php">Início</a></li>
+                        <li class="btn"><a href="../inicio/index.php">Eventos</a></li>
+                        <li class="btn"><a href="../pets/index.php">Adotar</a></li>
+                        <li class="btn"><a href="../inicio/index.php">Sobre</a></li>
+                        <li class="btn"><a href="../login/logout.php">Sair</a></li>
+                    </ul>
+                    <img src="menu-btn.png" alt="" class="menu-btn">
+                </nav>
+        <section class="contact">
+            <div id="overlay">
+
+                <!-- Informações de Contato -->
+                <form onsubmit="event.preventDefault(); validateForms(); enviarEmail()">
+                    <form method="GET" action="salva_form.php">
+                    <h1>Informações de Contato</h1>
+                    <label for="name">Nome:</label>
+                    <input type="text"name="nome" id="name" placeholder="Digite seu nome">
+                    <small class="error"></small>
+    
+                    <label for="email">Email:</label>
+                    <input type="text" name="email" id="email" placeholder="Digite seu email">
+                    <small class="error"></small>
+
+                    <label for="telefone">Telefone:</label>
+                    <input type="text" name="telefone" id="telefone" placeholder="Digite um número de telefone" maxlength="15" />                    
+                    <small class="error"></small>
+
+                    <span id="idade">
+                        <label for="date"name="data">Data de Nascimento:</label>
+                        <input type="date" name="date" id="date">
+                    </span>
+                    
+                    
+                    <!-- Informações de Endereço -->
+                    <h1>Endereço</h1>
+
+                    <span class="local">
+                    <label>Cep:
+                    <input name="cep" type="text" id="cep" class="mascCEP" placeholder="00000-00" value="" size="10" maxlength="9"
+                        onblur="pesquisacep(this.value);" /></label> <br>
+                        
+                    <label class="rua">Rua:
+                    <input name="rua" type="text" id="rua"  placeholder="Rua" size="60" /><small class="error"></small></label><br/>
+                    </span>
+
+                    <label>Bairro:
+                    <input name="bairro" type="text" placeholder="Bairro" id="bairro" size="40" /></label><br />
+                    <label>Cidade:
+                    <input name="cidade" type="text"  placeholder="Cidade" id="cidade" size="40" /></label><br />
+                    <label>Estado:
+                    <input name="uf" type="text"  placeholder="Estado"id="uf" size="2" /></label><br />
+                    
+                    <!-- Questionario Social -->
+                    
+                    <h1 class="social">Questionario Social</h1>
+                    <label for="message"><p>1. Se sente com condições financeiras, físicas e emocional para cuidar de um animal?</p></label>
+                    <textarea name="mensagem1" id="message" placeholder="Digite sua mensagem" rows="6"></textarea>
+                    <small class="error"></small>
+
+                    <label for="message-02"><p>2. Qual nome ou referência do animal que deseja adotar?</p></label>
+                    <textarea name="mensagem2"id="message-02" placeholder="Digite sua mensagem" rows="6"></textarea>
+                    <small class="error"></small>
+
+                    <h1>Qual animal deseja adotar?</h1>
+                    <div id="animal">
+                        <label for="animal">Seleciona a opção:</label>
+                        <select name="animal" id="animal">
+                            <option value="Cachorro">Cachorro</option>
+                            <option value="Gato">Gato</option>
+                            <option value="Ambos">Ambos</option>
+                        </select>
+                    </div>
+                    <div class="center">
+                    
+                    <p id="success"></p>
+                    <script type="text/javascript">
+                        function Nova()
+                        {
+                        location.href="salva_form.php"
+                        }
+                        </script>
+                        
+                        <input type="submit" value="Enviar">
+                        <input type="reset" value="Limpar">
+                    </div>
+                </form>
+                </form>
+            </div>
+        </section>
+</body>
+    <script src="https://cpwebassets.codepen.io/assets/common/stopExecutionOnTimeout-1b93190375e9ccc259df3a57c1abc0e64599724ae30d7ea4c6877eb615f89387.js"></script>
+    <script src="script.js"></script>
+</html>
